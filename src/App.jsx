@@ -1,30 +1,26 @@
-import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import الصفحةالرئيسية from './pages/HomePage';
-import العملاء from './pages/CustomersPage';
-import الفواتير from './pages/InvoicesPage';
-import المصروفات from './pages/ExpensesPage';
-import التقارير from './pages/ReportsPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import InvoicesPage from './pages/InvoicesPage';
+import CustomerPage from './pages/CustomerPage';
+import SupplierPage from './pages/SupplierPage';
+import ExpensesPage from './pages/ExpensesPage';
+import NewInvoice from './pages/NewInvoice';
+import ReportsPage from './pages/ReportsPage';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <nav style={{ padding: '10px', backgroundColor: '#eee' }}>
-        <Link to="/">الرئيسية</Link> |{' '}
-        <Link to="/customers">العملاء</Link> |{' '}
-        <Link to="/invoices">الفواتير</Link> |{' '}
-        <Link to="/expenses">المصروفات</Link> |{' '}
-        <Link to="/reports">التقارير</Link>
-      </nav>
+    <Router>
       <Routes>
-        <Route path="/" element={<الصفحةالرئيسية />} />
-        <Route path="/customers" element={<العملاء />} />
-        <Route path="/invoices" element={<الفواتير />} />
-        <Route path="/expenses" element={<المصروفات />} />
-        <Route path="/reports" element={<التقارير />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/invoices" element={<InvoicesPage />} />
+        <Route path="/customers" element={<CustomerPage />} />
+        <Route path="/suppliers" element={<SupplierPage />} />
+        <Route path="/expenses" element={<ExpensesPage />} />
+        <Route path="/new-invoice" element={<NewInvoice />} />
+        <Route path="/reports" element={<ReportsPage />} />
       </Routes>
-    </div>
+    </Router>
   );
-};
+}
 
 export default App;
