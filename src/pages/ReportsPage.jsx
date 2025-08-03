@@ -1,4 +1,5 @@
-// تقارير
-export default function ReportsPage() {
-  return <h1>تقارير</h1>;
-}
+import React from 'react';
+
+const ReportsPage = () => <div><h1>صفحة التقارير</h1></div>;
+
+export default ReportsPage;

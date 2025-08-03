@@ -1,4 +1,5 @@
-// مصروفات
-export default function ExpensesPage() {
-  return <h1>مصروفات</h1>;
-}
+import React from 'react';
+
+const ExpensesPage = () => <div><h1>صفحة المصروفات</h1></div>;
+
+export default ExpensesPage;
