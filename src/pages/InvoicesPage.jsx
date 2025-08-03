@@ -1,8 +1,12 @@
-export default function InvoicesPage() {
+import React from 'react';
+
+const InvoicesPage = () => {
   return (
-    <div>
-      <h1>فواتيري</h1>
-      {/* باقي المحتوى */}
+    <div style={ padding: '20px' }>
+      <h2>الفواتير</h2>
+      <p>هذه الصفحة مخصصة لـ الفواتير.</p>
     </div>
   );
-}
+};
+
+export default InvoicesPage;
